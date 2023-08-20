@@ -36,7 +36,7 @@ namespace PomoSprint
         
         private bool isPomoStarted = false;
         private int numOfPomos = 0;
-        private Thread thread;
+        private Thread? thread;
         private bool isFoucsTime = true;
         private MediaPlayer mediaPlayer = new MediaPlayer();
         private readonly Uri Bell_ring = new(System.IO.Path.GetDirectoryName(Environment.ProcessPath) + "\\Res\\Bell.wav");
@@ -52,8 +52,8 @@ namespace PomoSprint
 
         public class Speed_n : INotifyPropertyChanged
         {
-            private string Sec = "25";
-            private string Min = "00";
+            private string Sec = "00";
+            private string Min = "25";
 
             public string min
             {
@@ -158,12 +158,13 @@ namespace PomoSprint
         {
             isPomoStarted = false;
             thread.Join();
-            Time_Min.Text = "25";       
+            Time_Min.Text = "25";       //25
             Time_Sec.Text = "01";
             mediaPlayer.Open(Bell_ring);
             mediaPlayer.Play();
             PomoWindow pm = new PomoWindow(WindowType.Pomo);
             pm.ShowDialog();
+            Thread.Sleep(1000);
             thread = new Thread(StartPomo);
             thread.Start();
             isFoucsTime =true;
@@ -176,12 +177,13 @@ namespace PomoSprint
             isPomoStarted = false;
             numOfPomos = 0;
             thread.Join();
-            Time_Min.Text = "15";        
+            Time_Min.Text = "15";        //15
             Time_Sec.Text = "01";          
             mediaPlayer.Open(Bell_ring);
             mediaPlayer.Play();
             PomoWindow cp = new PomoWindow(WindowType.Complete);
             cp.ShowDialog();
+            Thread.Sleep(1000);
             thread = new Thread(StartPomo);
             thread.Start();
             isFoucsTime = false;
@@ -192,12 +194,13 @@ namespace PomoSprint
         {
             isPomoStarted = false;
             thread.Join();
-            Time_Min.Text = "05";          
+            Time_Min.Text = "05";          //05
             Time_Sec.Text = "01";         
             mediaPlayer.Open(Bell_ring);
             mediaPlayer.Play();
             PomoWindow bw = new PomoWindow(WindowType.Break);
             bw.ShowDialog();
+            Thread.Sleep(1000);
             thread = new Thread(StartPomo);
             thread.Start();
             isFoucsTime = false;
