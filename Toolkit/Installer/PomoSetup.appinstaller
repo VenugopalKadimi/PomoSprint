@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppInstaller
+	Uri="file:///C:/Users/kadim/source/repos/PomoSprint/Toolkit/Installer/PomoSetup.appinstaller"
+	Version="1.0.3.0" xmlns="http://schemas.microsoft.com/appx/appinstaller/2017/2">
+	<MainBundle
+		Name="37299f0b-2820-471d-995e-de36d89de192"
+		Version="1.0.3.0"
+		Publisher="CN=Venugopal Kadimi"
+		Uri="file:///C:/Users/kadim/source/repos/PomoSprint/Toolkit/Installer/PomoSetup_1.0.3.0_Test/PomoSetup_1.0.3.0_AnyCPU.msixbundle" />
+	<UpdateSettings>
+		<OnLaunch
+			HoursBetweenUpdateChecks="0" />
+	</UpdateSettings>
+</AppInstaller>
