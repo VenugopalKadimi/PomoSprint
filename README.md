@@ -30,7 +30,11 @@ The Pomodoro Timer Desktop Application is designed to assist users in following 
 ## Getting Started
 
 1. Clone or download the repository to your local machine.
-2. Run the Setup from the Toolkit folder to install application.
+2. Find the Installer folder in Toolkit.
+3. open PomoSetup folder and right click on the PomoSetup security certificate.
+4. Select install certificate.
+5. Now run PomoSetup install file from Installer folder.
+6. click on Install
 
 ## Usage
 
@@ -39,8 +43,8 @@ The Pomodoro Timer Desktop Application is designed to assist users in following 
 3. When the Pomodoro session ends, a new window will display, suggesting you take a 5-minute break.
 4. After the break, the application will prompt you to start another work session.
 5. After completing 4 Pomodoro sessions, the application will advise you to take a 15-minute break as part of the technique.
-6. To close the App click on the upper dot of “:” in Timer.
-7. To Reset the Timer click on the lower dot of “:” in Timer.
+6. To close the App click on the upper dot of  :  in Timer.
+7. To Reset the Timer click on the lower dot of  :  in Timer.
 
 
 ## License
