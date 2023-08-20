@@ -1,0 +1,33 @@
+MIT License
+
+PomoSprint
+
+Copyright (c) 2023 VENUGOPAL KADIMI
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+Third-Party Icons Attribution:
+Icons used in this app are provided by Freepik and are subject to their licensing terms.
+For websites, place the following code where icons are used:
+<a href="http://www.freepik.com">Designed by stories / Freepik</a>
+For printed materials, include the text "Designed by stories / Freepik" to provide proper attribution.
+Please note that these icons are used under the terms of the Freepik license and the full terms are available in section 7 of the Freepik terms of use (http://www.freepik.com/terms_of_use).
+The terms of the Freepik license take precedence over the terms mentioned here.
+Icons are free to use for both personal and commercial projects and can be modified according to your needs. However, sub-licensing, reselling, renting, or inclusion in any online or offline archive or database is not allowed.
+The Freepik terms of use are the authoritative source for licensing information and any discrepancies will be resolved in accordance with those terms.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
