@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PomoSprint</name>
+    </assembly>
+    <members>
+        <member name="T:NetSpeed.App">
+            <summary>
+            Interaction logic for App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:NetSpeed.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:NetSpeed.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:PomoSprint.MainWindow">
+            <summary>
+            Interaction logic for MainWindow.xaml
+            </summary>
+            
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:PomoSprint.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,22 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Timers;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Threading;
-using System.Windows.Threading;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace PomoSprint
 {
@@ -24,7 +14,7 @@ namespace PomoSprint
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     /// 
-    
+
     public partial class MainWindow : Window
     {
         public enum WindowType
@@ -33,7 +23,7 @@ namespace PomoSprint
             Pomo,
             Complete
         }
-        
+
         private bool isPomoStarted = false;
         private int numOfPomos = 0;
         private Thread? thread;
@@ -58,8 +48,8 @@ namespace PomoSprint
             public string min
             {
                 get { return Min; }
-                set 
-                { 
+                set
+                {
                     Min = value;
                     NotifyPropertyChanged(nameof(min));
 
@@ -87,9 +77,10 @@ namespace PomoSprint
 
         public void StartPomo()
         {
-            while(isPomoStarted) {
+            while (isPomoStarted)
+            {
                 Thread.Sleep(1000);
-                if(Application.Current == null)
+                if (Application.Current == null)
                 {
                     return;
                 }
@@ -97,22 +88,22 @@ namespace PomoSprint
                 {
                     update_GUI();
                 }));
-                
-            
+
+
             }
 
         }
 
-        
-         private void update_GUI()
-         {
+
+        private void update_GUI()
+        {
             int Minu = Convert.ToInt16(Time_Min.Text);
             int Secs = Convert.ToInt16(Time_Sec.Text);
             if (Secs == 0)
             {
                 if (Minu == 0)
                 {
-                    if(isFoucsTime)
+                    if (isFoucsTime)
                     {
                         Pomo_fin();
                         return;
@@ -122,7 +113,7 @@ namespace PomoSprint
                         Break_fin();
                         return;
                     }
-                    
+
                 }
                 else
                 {
@@ -141,7 +132,8 @@ namespace PomoSprint
         private void Pomo_fin()
         {
             numOfPomos++;
-            if(numOfPomos == 4) {
+            if (numOfPomos == 4)
+            {
 
                 TakeLongBreak();
                 return;
@@ -151,13 +143,16 @@ namespace PomoSprint
             {
                 TakeBreak();
             }
-            
+
         }
 
         private void Break_fin()
         {
             isPomoStarted = false;
-            thread.Join();
+            if (thread != null)
+            {
+                thread.Join();
+            }
             Time_Min.Text = "25";       //25
             Time_Sec.Text = "01";
             mediaPlayer.Open(Bell_ring);
@@ -167,7 +162,7 @@ namespace PomoSprint
             Thread.Sleep(1000);
             thread = new Thread(StartPomo);
             thread.Start();
-            isFoucsTime =true;
+            isFoucsTime = true;
             isPomoStarted = true;
 
         }
@@ -176,9 +171,12 @@ namespace PomoSprint
         {
             isPomoStarted = false;
             numOfPomos = 0;
-            thread.Join();
+            if (thread != null)
+            {
+                thread.Join();
+            }
             Time_Min.Text = "15";        //15
-            Time_Sec.Text = "01";          
+            Time_Sec.Text = "01";
             mediaPlayer.Open(Bell_ring);
             mediaPlayer.Play();
             PomoWindow cp = new PomoWindow(WindowType.Complete);
@@ -187,15 +185,18 @@ namespace PomoSprint
             thread = new Thread(StartPomo);
             thread.Start();
             isFoucsTime = false;
-            isPomoStarted = true;  
+            isPomoStarted = true;
         }
 
         private void TakeBreak()
         {
             isPomoStarted = false;
-            thread.Join();
+            if (thread != null)
+            {
+                thread.Join();
+            }
             Time_Min.Text = "05";          //05
-            Time_Sec.Text = "01";         
+            Time_Sec.Text = "01";
             mediaPlayer.Open(Bell_ring);
             mediaPlayer.Play();
             PomoWindow bw = new PomoWindow(WindowType.Break);
@@ -204,7 +205,7 @@ namespace PomoSprint
             thread = new Thread(StartPomo);
             thread.Start();
             isFoucsTime = false;
-            isPomoStarted=true;
+            isPomoStarted = true;
 
         }
 
@@ -214,26 +215,26 @@ namespace PomoSprint
         }
 
 
-        
+
 
         private void Start_Timer(object sender, MouseButtonEventArgs e)
         {
-            if(!isPomoStarted)
+            if (!isPomoStarted)
             {
                 isPomoStarted = true;
                 thread = new Thread(StartPomo);
                 thread.Start();
                 return;
             }
-            
+
 
         }
 
-        
+
         private void window_close(object sender, RoutedEventArgs e)
         {
             isPomoStarted = false;
-            if(thread != null)
+            if (thread != null)
             {
                 Thread.Sleep(1000);
                 thread.Join();
@@ -255,7 +256,7 @@ namespace PomoSprint
                 Time_Min.Text = "25";
                 Time_Sec.Text = "00";
             }
-            
+
             numOfPomos = 0;
         }
 
@@ -263,7 +264,8 @@ namespace PomoSprint
 
         public class PomoWindow : Window
         {
-            public PomoWindow(WindowType _windowType) {
+            public PomoWindow(WindowType _windowType)
+            {
                 this.Background = System.Windows.Media.Brushes.White;
                 this.Topmost = true;
                 this.Width = 500;
