@@ -1,8 +1,8 @@
 # Pomodoro Timer Desktop Application
 
-A simple and minimalistic Windows desktop application designed to help users effectively practice the Pomodoro Technique for improved productivity and focus.
+A simple unique UI, minimalistic and effective Windows desktop application designed to help users effectively practice the Pomodoro Technique for improved productivity and focus.
 
-This App require .Net 6 or above.
+This App was developed in .Net 6 or above.
 
 ## Table of Contents
 
@@ -21,7 +21,8 @@ The Pomodoro Timer Desktop Application is designed to assist users in following 
 ## Features
 
 - Simple and intuitive user interface.
-- Timer Close and Timer Reset buttons are merged as part of GUI.
+- Innovatively, Timer Close and Timer Reset buttons are merged as part of GUI.
+- Reaminder windows 
 - Automatic progression from work sessions to breaks and vice versa.
 - After 4 Pomodoro sessions, a long break of 15 minutes is scheduled.
 - Audible bell sound to indicate the end of each Pomodoro session.

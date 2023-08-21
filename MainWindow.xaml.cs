@@ -42,8 +42,8 @@ namespace PomoSprint
 
         public class Speed_n : INotifyPropertyChanged
         {
-            private string Sec = "00";
-            private string Min = "25";
+            private string Sec = "04";         //00
+            private string Min = "00";        //25
 
             public string min
             {
@@ -310,6 +310,7 @@ namespace PomoSprint
                 button.HorizontalAlignment = HorizontalAlignment.Center;
                 button.Background = System.Windows.Media.Brushes.Green;
                 button.Content = "OK";
+                button.Margin = new Thickness(16);
                 button.Click += PomoWindow_close;
                 gd.Children.Add(button);
             }
