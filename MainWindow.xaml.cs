@@ -42,8 +42,8 @@ namespace PomoSprint
 
         public class Speed_n : INotifyPropertyChanged
         {
-            private string Sec = "04";         //00
-            private string Min = "00";        //25
+            private string Sec = "00";         //00
+            private string Min = "25";        //25
 
             public string min
             {
