@@ -290,7 +290,7 @@ namespace PomoSprint
                 {
                     case WindowType.Break:
                         img.Source = new BitmapImage(Breakicon);
-                        label.Content = "Good Job! You have completed a Pomorado, You deserve a break.";
+                        label.Content = "Good Job! You have completed a Pomodoro, You deserve a break.";
                         break;
                     case WindowType.Pomo:
                         img.Source = new BitmapImage(Focusedicon);
